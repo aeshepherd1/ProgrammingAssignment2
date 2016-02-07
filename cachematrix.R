@@ -35,10 +35,9 @@ makeCacheMatrix <- function(x = matrix()) {
 ## caculated again.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
   mat <- x$getInverse()
   
-  ## if (!is.null(mat) && identical(x, old_x)) pass in addl param
   if (length(mat) != 0) {
     message("Cached inverse found - returning cached inverse.")
     return(mat)
